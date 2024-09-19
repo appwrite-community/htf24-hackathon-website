@@ -1,7 +1,7 @@
 <script>
 	import { user } from '$lib/user';
-	import PageHeading from '../components/PageHeading.svelte';
-	import NavBar from '../components/NavBar.svelte';
+	import PageHeading from '$lib/components/PageHeading.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
 
 	function login() {
 		user.login();
