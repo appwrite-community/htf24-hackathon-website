@@ -1,7 +1,6 @@
 // @ts-nocheck
 import { user } from '$lib/user';
 import { github } from '$lib/github';
-import { db } from '$lib/database';
 
 export async function load() {
 	let currentUser = await user.get();
