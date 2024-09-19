@@ -8,7 +8,10 @@ export async function load() {
 	let userSession = await user.session();
 	let githubUser = await github.getUser(userSession.providerAccessToken);
 
-	await db.add(currentUser.name, githubUser.login, currentUser.email);
+	fetch('/success', {
+		method: 'POST',
+		body: JSON.stringify({ github: githubUser.login }),
+	})
 
 	return {
 		userId: githubUser.login
