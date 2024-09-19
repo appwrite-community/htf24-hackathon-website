@@ -11,7 +11,7 @@
 <NavBar />
 <section id="giveaway" class="u-flex-vertical">
 	<div class="container u-flex-vertical giveawayContainer">
-		<PageHeading heading="Giveaway" />
+		<PageHeading heading="Hackathon" />
 
 		<img
 			src="/giveaway.png"
@@ -19,7 +19,7 @@
 		/>
 
 		<p class="heading-level-6">
-			Login with GitHub and get a chance to win an Appwriter keyboard!
+			Submit a project for a chance to win an Appwriter keyboard and other goodies!
 		</p>
 
 		<button class="button is-big" on:click={login}>

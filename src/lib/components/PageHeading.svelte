@@ -3,7 +3,7 @@
 </script>
 
 <div class="headingCard u-padding-4">
-	<h1 class="heading-level-1 u-normal">The Appwriter<span>_</span></h1>
+	<img class="u-margin-block-start-auto u-normal" src="/hacktoberfest.svg" alt="Hacktoberfest 2024 logo" height="100">
 	<h2 class="heading-level-2 u-normal">{heading}</h2>
 </div>
 
