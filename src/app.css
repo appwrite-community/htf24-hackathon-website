@@ -27,12 +27,20 @@ body {
 }
 
 h1 {
-	color: #adadb0;
+	color: hsl(var(--color-neutral-0));
+	text-align: center;
 	font-family: 'Aeonik Pro';
 }
 
 h2 {
 	color: #adadb0;
+	text-align: center;
+	font-family: 'Aeonik Pro';
+}
+
+h3 {
+	color: #adadb0;
+	text-align: center;
 	font-family: 'Aeonik Pro';
 }
 

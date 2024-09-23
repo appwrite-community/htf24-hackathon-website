@@ -3,9 +3,3 @@
 		Could not login with GitHub, please try again!
 	</h1>
 </div>
-
-<style>
-	h1 {
-		color: hsl(var(--color-neutral-0));
-	}
-</style>
