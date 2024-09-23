@@ -13,6 +13,7 @@ export async function load() {
 	})
 
 	return {
-		userId: githubUser.login
+		userId: githubUser.login,
+		avatar: githubUser.avatar_url,
 	};
 }

@@ -1,25 +1,23 @@
 <script>
 	import { user } from '$lib/user';
 	import PageHeading from '$lib/components/PageHeading.svelte';
-	import NavBar from '$lib/components/NavBar.svelte';
 
 	function login() {
 		user.login();
 	}
 </script>
 
-<NavBar />
 <section id="giveaway" class="u-flex-vertical">
-	<div class="container u-flex-vertical giveawayContainer">
-		<PageHeading heading="Hackathon" />
+	<div class="container u-flex-vertical">
+		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
 		<img
 			src="/giveaway.png"
-			alt="A keyboard branded with the Appwrite logo on the Escape key"
+			alt="Prizes for the Hackathon"
 		/>
 
 		<p class="heading-level-6">
-			Submit a project for a chance to win an Appwriter keyboard and other goodies!
+			Submit a Hackathon project for a chance to win an Appwriter keyboard and other goodies!
 		</p>
 
 		<button class="button is-big" on:click={login}>
@@ -40,22 +38,24 @@
 		justify-content: center;
 	}
 
-	.giveawayContainer {
-		align-self: center;
-		padding: 2rem;
-	}
-
 	img {
 		border-radius: var(--border-radius-medium);
-		max-width: 70%;
+		max-height: 50%;
+		max-width: 80%;
 	}
 
 	p, button {
-		margin: 2rem;
+		margin: 2rem;		
+		max-width: 80%;
 	}
 
 	@media (max-width: 768px) {
+		#giveaway {
+			padding: 10% 0;
+		}
+
 		img {
+			max-height: 70%;
 			max-width: 90%;
 		}
 
@@ -67,7 +67,7 @@
 			margin: 1.5rem auto;
 		}
 
-		.giveawayContainer {
+		.container {
 			padding: 0.5rem;
 		}
 	}

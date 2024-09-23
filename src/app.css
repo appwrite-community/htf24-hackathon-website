@@ -17,13 +17,13 @@ body {
 .container {
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(35, 35, 37);
-	border-radius: 16px;
-	border: 1px solid #ffffff14;
+	background-color: rgba(35, 35, 37, 0);
 	margin: auto;
 	max-width: 50%;
 	width: fit-content;
 	height: min-content;
+	align-self: center;
+	padding: 2rem;
 }
 
 h1 {
@@ -43,7 +43,7 @@ p {
 
 @media (max-width: 768px) {
 	.container {
-		max-width: 85%;
+		max-width: 95%;
 	}
 }
 
