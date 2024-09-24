@@ -20,7 +20,7 @@ body {
 	background-color: rgba(35, 35, 37, 0);
 	margin: auto;
 	max-width: 50%;
-	width: fit-content;
+	width: max-content;
 	height: min-content;
 	align-self: center;
 	padding: 2rem;
@@ -62,21 +62,48 @@ p {
 	align-items: center;
 	gap: 8px;
 	border-radius: 8px;
+}
+
+.primaryButton {
 	background: linear-gradient(94deg, #fd366e 0%, #fd366e 60.94%, #fe536d 100%);
 }
 
-.button:hover {
+.primaryButton:hover {
 	background: linear-gradient(94deg, #fd366e 0%, #fd366e 60.94%, #fe536d 100%);
 	box-shadow: 0px 0px 32px 0px rgba(253, 54, 110, 0.32);
 }
 
-.button:active {
+.primaryButton:active {
 	background: linear-gradient(94deg, #fd366e 0%, #fd366e 60.94%, #fe536d 100%);
 	box-shadow: 0px 0px 32px 0px rgba(253, 54, 110, 0.24);
 }
 
-.button:focus-visible {
+.primaryButton:focus-visible {
 	border: 2px solid var(--background, #19191c);
 	background: linear-gradient(94deg, #fd366e 0%, #fd366e 60.94%, #fe536d 100%);
 	box-shadow: 0px 0px 0px 1px #85dbd8;
 }
+
+.secondaryButton {
+	border-radius: 8px;
+	border: 1px solid #96294A;
+	background: rgba(253, 54, 110, 0.04);
+	box-shadow: 0px -6px 10px 0px rgba(253, 54, 110, 0.08) inset;
+}
+
+.secondaryButton:hover {
+	border-radius: 8px;
+	background: rgba(253, 54, 110, 0.10);
+}
+
+.secondaryButton:active {
+	background: rgba(253, 54, 110, 0.16);
+}
+
+.secondaryButton:focus-visible {
+	background: rgba(253, 54, 110, 0.04);
+	box-shadow: 0px 0px 0px 2px #19191C, 0px 0px 0px 3.5px #85DBD8, 0px -6px 10px 0px rgba(253, 54, 110, 0.08) inset;
+}
+
+
+

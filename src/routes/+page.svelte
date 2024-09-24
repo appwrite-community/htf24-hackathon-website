@@ -20,7 +20,7 @@
 			Submit a Hackathon project for a chance to win an Appwriter keyboard and other goodies!
 		</p>
 
-		<button class="button is-big" on:click={login}>
+		<button class="button primaryButton is-big" on:click={login}>
 			<span class="icon-github"></span>
 			Sign in with GitHub
 		</button>
