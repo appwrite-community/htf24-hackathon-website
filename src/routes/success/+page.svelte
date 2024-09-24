@@ -12,7 +12,7 @@
 	<h2 class="heading-level-3 u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
 	<h3 class="heading-level-4 u-normal">Please remember to submit your hackathon project and claim your Appwrite Cloud credits.</h3>
 
-	<div class="buttons u-gap-32">
+	<div class="buttons u-gap-16">
 		<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank">Claim Cloud credits</a>
 		<a class="button primaryButton is-big" href="https://github.com/appwrite-community/htf24-hackathon-submissions" target="_blank">Submit hackathon project</a>
 	</div>
@@ -50,7 +50,7 @@
 
 	@media (max-width: 768px) {
 		img {
-			width: 35vh;
+			width: 8rem;
 		}
 	}
 </style>

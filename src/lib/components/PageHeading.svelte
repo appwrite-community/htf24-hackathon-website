@@ -56,9 +56,5 @@
 			padding: 1.5rem 0;
 			margin: 0 auto;		
 		}
-
-		.verticalDivider {
-			width: 0.25rem;
-		}
 	}
 </style>
