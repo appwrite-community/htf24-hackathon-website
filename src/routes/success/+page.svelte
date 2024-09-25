@@ -5,21 +5,32 @@
 	let avatar = data.avatar;
 </script>
 
-<div class="container u-flex-vertical u-gap-32">
-	<PageHeading heading="Hacktoberfest 2024 hackathon" />
+<section class="u-flex-vertical">
+	<div class="container u-flex-vertical u-gap-32">
+		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
-	<img class="u-margin-block-start-auto u-normal" src={avatar} alt="User avatar">
-	<h2 class="heading-level-3 u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
-	<h3 class="heading-level-4 u-normal">Please remember to submit your hackathon project and claim your Appwrite Cloud credits.</h3>
+		<img class="u-margin-block-start-auto u-normal" src={avatar} alt="User avatar">
+		<h2 class="heading-level-3 u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
+		<p class="u-normal">Please remember to submit your hackathon project and claim your Appwrite Cloud credits.</p>
 
-	<div class="buttons u-gap-16">
-		<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank">Claim Cloud credits</a>
-		<a class="button primaryButton is-big" href="https://github.com/appwrite-community/htf24-hackathon-submissions" target="_blank">Submit hackathon project</a>
+		<div class="buttons u-gap-16">
+			<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank">Claim Cloud credits</a>
+			<a class="button primaryButton is-big" href="https://github.com/appwrite-community/htf24-hackathon-submissions" target="_blank">Submit hackathon project</a>
+		</div>
+		<a class="rulesLink" href="https://github.com/appwrite-community/htf24-hackathon-submissions/blob/main/RULES.md" target="_blank">Read hackathon rules<span class="icon-arrow-sm-right"></span></a>
 	</div>
-	<a class="rulesLink" href="https://github.com/appwrite-community/htf24-hackathon-submissions/blob/main/RULES.md" target="_blank">Read hackathon rules<span class="icon-arrow-sm-right"></span></a>
-</div>
+</section>
 
 <style>
+	section {
+		height: 100vh;
+		width: 100vw;
+		position: relative;
+		top: 0;
+		text-align: center;
+		justify-content: center;
+	}
+
 	span {
 		color: hsl(var(--color-neutral-0));
 	}
@@ -30,13 +41,16 @@
 		border: 2px solid hsl(var(--color-neutral-85));
 	}
 
+	p {
+		font-size: 1.5rem;
+	}
+
 	.buttons {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		width: 100vw;
 		justify-content: center;
-		padding: 0 5vw;
+		width: max-content;
 	}
 
 	.rulesLink {
@@ -48,9 +62,33 @@
 		text-decoration: underline;
 	}
 
+	h2, p, button {
+		max-width: 80%;
+	}
+
 	@media (max-width: 768px) {
+		.container {
+			margin: 0 20px;
+			width: auto;
+			padding: 0;
+		}
+
 		img {
 			width: 8rem;
 		}
+
+		h2, p, a {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.buttons {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
 	}
+
 </style>

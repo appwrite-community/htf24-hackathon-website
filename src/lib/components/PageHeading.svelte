@@ -17,7 +17,6 @@
 		background-color: transparent;
 		border: 0;
 		text-align: center;
-		padding: 2rem 0;
 		width: 100%;
 	}
 
@@ -53,8 +52,18 @@
 	@media (max-width: 768px) {
 		.headingCard {
 			width: 98%;
-			padding: 1.5rem 0;
 			margin: 0 auto;		
+		}
+
+		h1 {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width: 315px) {
+		.headingLogos {
+			display: none;
 		}
 	}
 </style>

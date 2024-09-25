@@ -7,8 +7,8 @@
 	}
 </script>
 
-<section id="giveaway" class="u-flex-vertical">
-	<div class="container u-flex-vertical">
+<section class="u-flex-vertical">
+	<div class="container u-flex-vertical u-gap-32">
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
 		<img
@@ -17,7 +17,7 @@
 		/>
 
 		<p class="heading-level-6">
-			Submit a Hackathon project for a chance to win an Appwriter keyboard and other goodies!
+			Submit a hackathon project for a chance to win an Appwriter keyboard and other goodies!
 		</p>
 
 		<button class="button primaryButton is-big" on:click={login}>
@@ -28,10 +28,9 @@
 </section>
 
 <style>
-	#giveaway {
+	section {
 		height: 100vh;
 		width: 100vw;
-		padding: 20% 0;
 		position: relative;
 		top: 0;
 		text-align: center;
@@ -45,30 +44,23 @@
 	}
 
 	p, button {
-		margin: 2rem;		
 		max-width: 80%;
 	}
 
 	@media (max-width: 768px) {
-		#giveaway {
-			padding: 10% 0;
+		.container {
+			margin: 0 20px;
+			width: auto;
+			padding: 0;
 		}
 
 		img {
-			max-height: 70%;
-			max-width: 90%;
-		}
-
-		div {
-			padding: 1rem;
+			max-width: 100%;
 		}
 
 		p, button {
-			margin: 1.5rem auto;
-		}
-
-		.container {
-			padding: 0.5rem;
+			width: 100%;
+			max-width: 100%;
 		}
 	}
 </style>
