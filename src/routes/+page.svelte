@@ -45,6 +45,10 @@
 		height: auto;
 	}
 
+	picture {
+		max-width: 70%;
+	}
+
 	p, button {
 		max-width: 80%;
 	}
@@ -56,7 +60,7 @@
 			padding: 0;
 		}
 
-		img {
+		picture {
 			max-width: 100%;
 		}
 
