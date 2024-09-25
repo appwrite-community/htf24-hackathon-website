@@ -1,1 +1,1 @@
-# Hacktoberfest Hackathon App
+# Appwrite Hacktoberfest 2024 Hackathon
