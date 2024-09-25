@@ -12,7 +12,7 @@
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
 		<img
-			src="/giveaway.png"
+			src="/prizes.png"
 			alt="Prizes for the Hackathon"
 		/>
 
@@ -38,6 +38,7 @@
 	}
 
 	img {
+		aspect-ratio: 584 / 323; 
 		border-radius: var(--border-radius-medium);
 		max-height: 50%;
 		max-width: 80%;
