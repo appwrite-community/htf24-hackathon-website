@@ -10,7 +10,7 @@
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
 		<img class="u-margin-block-start-auto u-normal" src={avatar} alt="User avatar">
-		<h2 class="heading-level-3 u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
+		<h2 class="u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
 		<p class="u-normal">Please remember to submit your hackathon project and claim your Appwrite Cloud credits.</p>
 
 		<div class="buttons u-gap-16">
@@ -41,8 +41,20 @@
 		border: 2px solid hsl(var(--color-neutral-85));
 	}
 
-	p {
+	h2 {
 		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.75rem;
+	}
+
+	p {
+		font-family: Inter;
+		font-size: 1.25rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 1.75rem; /* 140% */
+		letter-spacing: -0.018rem;
 	}
 
 	.buttons {
