@@ -74,7 +74,7 @@
 		text-decoration: underline;
 	}
 
-	h2, p, button {
+	h2, p, a {
 		max-width: 80%;
 	}
 

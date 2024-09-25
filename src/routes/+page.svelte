@@ -46,7 +46,7 @@
 	}
 
 	picture {
-		max-width: 70%;
+		max-width: 66.67%;
 	}
 
 	p, button {
