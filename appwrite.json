@@ -41,7 +41,9 @@
             "name": "Send To UserList",
             "runtime": "node-18.0",
             "execute": [],
-            "events": [],
+            "events": [
+                "databases.users.collections.info.documents.*.create"
+            ],
             "scopes": [],
             "schedule": "",
             "timeout": 15,
