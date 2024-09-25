@@ -1,6 +1,7 @@
 <script>
 	import { user } from '$lib/user';
 	import PageHeading from '$lib/components/PageHeading.svelte';
+	import Prizes from '$lib/images/prizes.png?enhanced';
 
 	function login() {
 		user.login();
@@ -11,8 +12,8 @@
 	<div class="container u-flex-vertical u-gap-32">
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
-		<img
-			src="/prizes.png"
+		<enhanced:img
+			src={Prizes}
 			alt="Prizes for the Hackathon"
 		/>
 
@@ -40,8 +41,8 @@
 	img {
 		aspect-ratio: 584 / 323; 
 		border-radius: var(--border-radius-medium);
-		max-height: 50%;
-		max-width: 80%;
+		width: var(--size);
+		height: auto;
 	}
 
 	p, button {
