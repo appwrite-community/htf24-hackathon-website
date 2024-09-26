@@ -25,6 +25,8 @@
 			<span class="icon-github"></span>
 			Sign in with GitHub
 		</button>
+
+		<a class="rulesLink" href="https://appwrite.io/blog/post/appwrite-hacktoberfest-hackathon-2024" target="_blank">Learn more about the hackathon<span class="icon-arrow-sm-right"></span></a>
 	</div>
 </section>
 

@@ -15,9 +15,9 @@
 
 		<div class="buttons u-gap-16">
 			<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank">Claim Cloud credits</a>
-			<a class="button primaryButton is-big" href="https://github.com/appwrite-community/htf24-hackathon-submissions" target="_blank">Submit hackathon project</a>
+			<a class="button primaryButton is-big" href="https://apwr.dev/htf24-submit" target="_blank">Submit hackathon project</a>
 		</div>
-		<a class="rulesLink" href="https://github.com/appwrite-community/htf24-hackathon-submissions/blob/main/RULES.md" target="_blank">Read hackathon rules<span class="icon-arrow-sm-right"></span></a>
+		<a class="rulesLink" href="https://apwr.dev/htf24-rules" target="_blank">Read hackathon rules<span class="icon-arrow-sm-right"></span></a>
 	</div>
 </section>
 
@@ -63,15 +63,6 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		width: max-content;
-	}
-
-	.rulesLink {
-		color: hsl(var(--color-neutral-0));
-		font-size: 1rem;
-	}
-
-	.rulesLink:hover {
-		text-decoration: underline;
 	}
 
 	h2, p, a {
