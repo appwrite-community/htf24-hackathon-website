@@ -8,10 +8,13 @@ export default async ({ req, res, log, error }) => {
   const databases = new Databases(client);
 
   try {
-    const response = await databases.listDocuments('users', 'info', [ Query.limit(5000), Query.select(['$id']) ]);
-    
+    const response = await databases.listDocuments('users', 'info', [
+      Query.limit(5000),
+      Query.select(['$id']),
+    ]);
+
     await databases.updateDocument('users', 'count', 'total', {
-      number: response.total
+      number: response.total,
     });
 
     log('Total users count: ', response.total);

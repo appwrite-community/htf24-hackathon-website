@@ -1,5 +1,5 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
 	import { user } from '$lib/user';
 	import PageHeading from '$lib/components/PageHeading.svelte';
@@ -16,10 +16,7 @@
 	<div class="container u-flex-vertical u-gap-32">
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
-		<enhanced:img
-			src={Prizes}
-			alt="Prizes for the Hackathon"
-		/>
+		<enhanced:img src={Prizes} alt="Prizes for the Hackathon" />
 
 		<p class="heading-level-6">
 			Submit a hackathon project for a chance to win an Appwriter keyboard and other goodies!
@@ -35,7 +32,11 @@
 			Sign in with GitHub
 		</button>
 
-		<a class="rulesLink" href="https://appwrite.io/blog/post/appwrite-hacktoberfest-hackathon-2024" target="_blank">Learn more about the hackathon<span class="icon-arrow-sm-right"></span></a>
+		<a
+			class="rulesLink"
+			href="https://appwrite.io/blog/post/appwrite-hacktoberfest-hackathon-2024"
+			target="_blank">Learn more about the hackathon<span class="icon-arrow-sm-right"></span></a
+		>
 	</div>
 </section>
 
@@ -50,7 +51,7 @@
 	}
 
 	img {
-		aspect-ratio: 584 / 323; 
+		aspect-ratio: 584 / 323;
 		border-radius: var(--border-radius-medium);
 		width: var(--size);
 		height: auto;
@@ -60,7 +61,8 @@
 		max-width: 66.67%;
 	}
 
-	p, button {
+	p,
+	button {
 		max-width: 80%;
 		vertical-align: middle;
 	}
@@ -86,7 +88,8 @@
 			max-width: 100%;
 		}
 
-		p, button {
+		p,
+		button {
 			width: 100%;
 			max-width: 100%;
 		}

@@ -4,9 +4,13 @@
 
 <div class="headingCard u-padding-4">
 	<div class="headingLogos u-gap-24">
-		<img class="u-margin-block-start-auto u-normal" src="/hacktoberfest.svg" alt="Hacktoberfest 2024 logo">
+		<img
+			class="u-margin-block-start-auto u-normal"
+			src="/hacktoberfest.svg"
+			alt="Hacktoberfest 2024 logo"
+		/>
 		<div class="verticalDivider"></div>
-		<img class="u-margin-block-start-auto u-normal" src="/appwrite.svg" alt="Appwrite logo">
+		<img class="u-margin-block-start-auto u-normal" src="/appwrite.svg" alt="Appwrite logo" />
 	</div>
 	<h1 class="heading-level-1 u-normal">{heading}<span>_</span></h1>
 </div>
@@ -52,7 +56,7 @@
 	@media (max-width: 768px) {
 		.headingCard {
 			width: 98%;
-			margin: 0 auto;		
+			margin: 0 auto;
 		}
 
 		h1 {

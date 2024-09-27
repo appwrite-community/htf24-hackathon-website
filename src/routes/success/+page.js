@@ -10,17 +10,17 @@ export async function load() {
 
 	await fetch('/success', {
 		method: 'POST',
-		body: JSON.stringify({ github: githubUser.login }),
-	})
+		body: JSON.stringify({ github: githubUser.login })
+	});
 
 	const email = currentUser.email;
-  	const name = (currentUser.name != "") ? currentUser.name : email;
-  	const userId = currentUser.$id; 
+	const name = currentUser.name != '' ? currentUser.name : email;
+	const userId = currentUser.$id;
 
 	await db.addUserInfo(email, name, userId);
 
 	return {
 		userId: githubUser.login,
-		avatar: githubUser.avatar_url,
+		avatar: githubUser.avatar_url
 	};
 }

@@ -9,15 +9,23 @@
 	<div class="container u-flex-vertical u-gap-32">
 		<PageHeading heading="Hacktoberfest 2024 hackathon" />
 
-		<img class="u-margin-block-start-auto u-normal" src={avatar} alt="User avatar">
-		<h2 class="u-normal"> Thank you for signing up, <span>@{userId}</span></h2>
-		<p class="u-normal">Please remember to submit your hackathon project and claim your Appwrite Cloud credits.</p>
+		<img class="u-margin-block-start-auto u-normal" src={avatar} alt="User avatar" />
+		<h2 class="u-normal">Thank you for signing up, <span>@{userId}</span></h2>
+		<p class="u-normal">
+			Please remember to submit your hackathon project and claim your Appwrite Cloud credits.
+		</p>
 
 		<div class="buttons u-gap-16">
-			<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank">Claim Cloud credits</a>
-			<a class="button primaryButton is-big" href="https://apwr.dev/htf24-submit" target="_blank">Submit hackathon project</a>
+			<a class="button secondaryButton is-big" href="https://apwr.dev/hacktoberfest" target="_blank"
+				>Claim Cloud credits</a
+			>
+			<a class="button primaryButton is-big" href="https://apwr.dev/htf24-submit" target="_blank"
+				>Submit hackathon project</a
+			>
 		</div>
-		<a class="rulesLink" href="https://apwr.dev/htf24-rules" target="_blank">Read hackathon rules<span class="icon-arrow-sm-right"></span></a>
+		<a class="rulesLink" href="https://apwr.dev/htf24-rules" target="_blank"
+			>Read hackathon rules<span class="icon-arrow-sm-right"></span></a
+		>
 	</div>
 </section>
 
@@ -65,7 +73,9 @@
 		width: max-content;
 	}
 
-	h2, p, a {
+	h2,
+	p,
+	a {
 		max-width: 80%;
 	}
 
@@ -80,7 +90,9 @@
 			width: 8rem;
 		}
 
-		h2, p, a {
+		h2,
+		p,
+		a {
 			width: 100%;
 			max-width: 100%;
 		}
@@ -93,5 +105,4 @@
 			width: 100%;
 		}
 	}
-
 </style>

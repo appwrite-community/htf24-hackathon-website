@@ -1,151 +1,134 @@
 {
-    "projectId": "htf-24",
-    "projectName": "Hacktoberfest 2024 Hackathon",
-    "settings": {
-        "services": {
-            "account": true,
-            "avatars": true,
-            "databases": true,
-            "locale": true,
-            "health": true,
-            "storage": true,
-            "teams": true,
-            "users": true,
-            "functions": true,
-            "graphql": true,
-            "messaging": true
-        },
-        "auth": {
-            "methods": {
-                "jwt": true,
-                "phone": true,
-                "invites": true,
-                "anonymous": true,
-                "email-otp": true,
-                "magic-url": true,
-                "email-password": true
-            },
-            "security": {
-                "duration": 31536000,
-                "limit": 0,
-                "sessionsLimit": 10,
-                "passwordHistory": 0,
-                "passwordDictionary": false,
-                "personalDataCheck": false
-            }
-        }
-    },
-    "functions": [
-        {
-            "$id": "userlist",
-            "name": "Send To UserList",
-            "runtime": "node-18.0",
-            "execute": [],
-            "events": [
-                "databases.users.collections.info.documents.*.create"
-            ],
-            "scopes": [],
-            "schedule": "",
-            "timeout": 15,
-            "enabled": true,
-            "logging": true,
-            "entrypoint": "src/main.js",
-            "commands": "npm install",
-            "path": "functions/userlist"
-        },
-        {
-            "$id": "total-users",
-            "name": "Total Users",
-            "runtime": "node-18.0",
-            "execute": [
-                "any"
-            ],
-            "events": [
-                "databases.users.collections.info.documents.*.create"
-            ],
-            "scopes": [
-                "documents.read",
-                "documents.write"
-            ],
-            "schedule": "",
-            "timeout": 60,
-            "enabled": true,
-            "logging": true,
-            "entrypoint": "src/main.js",
-            "commands": "npm install",
-            "path": "functions/total-users"
-        }
-    ],
-    "databases": [
-        {
-            "$id": "users",
-            "name": "Users",
-            "enabled": true
-        }
-    ],
-    "collections": [
-        {
-            "$id": "info",
-            "$permissions": [
-                "create(\"users\")"
-            ],
-            "databaseId": "users",
-            "name": "Info",
-            "enabled": true,
-            "documentSecurity": false,
-            "attributes": [
-                {
-                    "key": "name",
-                    "type": "string",
-                    "required": false,
-                    "array": false,
-                    "size": 2000,
-                    "default": null
-                },
-                {
-                    "key": "email",
-                    "type": "string",
-                    "required": true,
-                    "array": false,
-                    "format": "email",
-                    "default": null
-                }
-            ],
-            "indexes": [
-                {
-                    "key": "email",
-                    "type": "unique",
-                    "status": "available",
-                    "attributes": [
-                        "email"
-                    ],
-                    "orders": [
-                        "ASC"
-                    ]
-                }
-            ]
-        },
-        {
-            "$id": "count",
-            "$permissions": [
-                "read(\"any\")"
-            ],
-            "databaseId": "users",
-            "name": "Count",
-            "enabled": true,
-            "documentSecurity": false,
-            "attributes": [
-                {
-                    "key": "number",
-                    "type": "integer",
-                    "required": true,
-                    "array": false,
-                    "min": 0,
-                    "max": 9223372036854775807,
-                    "default": null
-                }
-            ],
-            "indexes": []
-        }
-    ]
+	"projectId": "htf-24",
+	"projectName": "Hacktoberfest 2024 Hackathon",
+	"settings": {
+		"services": {
+			"account": true,
+			"avatars": true,
+			"databases": true,
+			"locale": true,
+			"health": true,
+			"storage": true,
+			"teams": true,
+			"users": true,
+			"functions": true,
+			"graphql": true,
+			"messaging": true
+		},
+		"auth": {
+			"methods": {
+				"jwt": true,
+				"phone": true,
+				"invites": true,
+				"anonymous": true,
+				"email-otp": true,
+				"magic-url": true,
+				"email-password": true
+			},
+			"security": {
+				"duration": 31536000,
+				"limit": 0,
+				"sessionsLimit": 10,
+				"passwordHistory": 0,
+				"passwordDictionary": false,
+				"personalDataCheck": false
+			}
+		}
+	},
+	"functions": [
+		{
+			"$id": "userlist",
+			"name": "Send To UserList",
+			"runtime": "node-18.0",
+			"execute": [],
+			"events": ["databases.users.collections.info.documents.*.create"],
+			"scopes": [],
+			"schedule": "",
+			"timeout": 15,
+			"enabled": true,
+			"logging": true,
+			"entrypoint": "src/main.js",
+			"commands": "npm install",
+			"path": "functions/userlist"
+		},
+		{
+			"$id": "total-users",
+			"name": "Total Users",
+			"runtime": "node-18.0",
+			"execute": ["any"],
+			"events": ["databases.users.collections.info.documents.*.create"],
+			"scopes": ["documents.read", "documents.write"],
+			"schedule": "",
+			"timeout": 60,
+			"enabled": true,
+			"logging": true,
+			"entrypoint": "src/main.js",
+			"commands": "npm install",
+			"path": "functions/total-users"
+		}
+	],
+	"databases": [
+		{
+			"$id": "users",
+			"name": "Users",
+			"enabled": true
+		}
+	],
+	"collections": [
+		{
+			"$id": "info",
+			"$permissions": ["create(\"users\")"],
+			"databaseId": "users",
+			"name": "Info",
+			"enabled": true,
+			"documentSecurity": false,
+			"attributes": [
+				{
+					"key": "name",
+					"type": "string",
+					"required": false,
+					"array": false,
+					"size": 2000,
+					"default": null
+				},
+				{
+					"key": "email",
+					"type": "string",
+					"required": true,
+					"array": false,
+					"format": "email",
+					"default": null
+				}
+			],
+			"indexes": [
+				{
+					"key": "email",
+					"type": "unique",
+					"status": "available",
+					"attributes": ["email"],
+					"orders": ["ASC"]
+				}
+			]
+		},
+		{
+			"$id": "count",
+			"$permissions": ["read(\"any\")"],
+			"databaseId": "users",
+			"name": "Count",
+			"enabled": true,
+			"documentSecurity": false,
+			"attributes": [
+				{
+					"key": "number",
+					"type": "integer",
+					"required": true,
+					"array": false,
+					"min": 0,
+					"max": 9223372036854775807,
+					"default": null
+				}
+			],
+			"indexes": []
+		}
+	]
 }
