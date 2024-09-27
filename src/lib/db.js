@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { Query } from "appwrite";
 import { databases } from "./appwrite";
 
 export const db = {
@@ -9,6 +10,14 @@ export const db = {
                 email
             });
             console.log(`Saved user name and email in database.`);
+        } catch (err) {
+            console.error(err);
+        }
+    },
+    getTotalUsersCount: async () => {
+        try {
+            const response = await databases.getDocument('users', 'count', 'total', [ Query.select(['number']) ]);
+            return response.number;
         } catch (err) {
             console.error(err);
         }

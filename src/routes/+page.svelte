@@ -1,7 +1,11 @@
 <script>
+// @ts-nocheck
+
 	import { user } from '$lib/user';
 	import PageHeading from '$lib/components/PageHeading.svelte';
 	import Prizes from '$lib/images/prizes.png?enhanced';
+
+	export let data;
 
 	function login() {
 		user.login();
@@ -19,6 +23,11 @@
 
 		<p class="heading-level-6">
 			Submit a hackathon project for a chance to win an Appwriter keyboard and other goodies!
+		</p>
+
+		<p class="heading-level-6 u-flex u-gap-4 totalCount">
+			<span class="icon-check-circle"></span>
+			{data.total} hackers registered!
 		</p>
 
 		<button class="button primaryButton is-big" on:click={login}>
@@ -53,6 +62,12 @@
 
 	p, button {
 		max-width: 80%;
+		vertical-align: middle;
+	}
+
+	.totalCount {
+		color: hsl(var(--color-neutral-0));
+		justify-content: center;
 	}
 
 	@media (max-width: 768px) {

@@ -52,6 +52,28 @@
             "entrypoint": "src/main.js",
             "commands": "npm install",
             "path": "functions/userlist"
+        },
+        {
+            "$id": "total-users",
+            "name": "Total Users",
+            "runtime": "node-18.0",
+            "execute": [
+                "any"
+            ],
+            "events": [
+                "databases.users.collections.info.documents.*.create"
+            ],
+            "scopes": [
+                "documents.read",
+                "documents.write"
+            ],
+            "schedule": "",
+            "timeout": 60,
+            "enabled": true,
+            "logging": true,
+            "entrypoint": "src/main.js",
+            "commands": "npm install",
+            "path": "functions/total-users"
         }
     ]
 }
