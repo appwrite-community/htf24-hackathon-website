@@ -1,6 +1,6 @@
 {
     "projectId": "htf-24",
-    "projectName": "Hacktoberfest 2024",
+    "projectName": "Hacktoberfest 2024 Hackathon",
     "settings": {
         "services": {
             "account": true,
@@ -74,6 +74,78 @@
             "entrypoint": "src/main.js",
             "commands": "npm install",
             "path": "functions/total-users"
+        }
+    ],
+    "databases": [
+        {
+            "$id": "users",
+            "name": "Users",
+            "enabled": true
+        }
+    ],
+    "collections": [
+        {
+            "$id": "info",
+            "$permissions": [
+                "create(\"users\")"
+            ],
+            "databaseId": "users",
+            "name": "Info",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "name",
+                    "type": "string",
+                    "required": false,
+                    "array": false,
+                    "size": 2000,
+                    "default": null
+                },
+                {
+                    "key": "email",
+                    "type": "string",
+                    "required": true,
+                    "array": false,
+                    "format": "email",
+                    "default": null
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "email",
+                    "type": "unique",
+                    "status": "available",
+                    "attributes": [
+                        "email"
+                    ],
+                    "orders": [
+                        "ASC"
+                    ]
+                }
+            ]
+        },
+        {
+            "$id": "count",
+            "$permissions": [
+                "read(\"any\")"
+            ],
+            "databaseId": "users",
+            "name": "Count",
+            "enabled": true,
+            "documentSecurity": false,
+            "attributes": [
+                {
+                    "key": "number",
+                    "type": "integer",
+                    "required": true,
+                    "array": false,
+                    "min": 0,
+                    "max": 9223372036854775807,
+                    "default": null
+                }
+            ],
+            "indexes": []
         }
     ]
 }

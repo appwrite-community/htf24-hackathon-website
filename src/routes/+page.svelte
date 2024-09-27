@@ -68,6 +68,11 @@
 	.totalCount {
 		color: hsl(var(--color-neutral-0));
 		justify-content: center;
+		vertical-align: middle;
+	}
+
+	.icon-check-circle {
+		margin: auto 0;
 	}
 
 	@media (max-width: 768px) {
