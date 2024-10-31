@@ -16,7 +16,8 @@ export async function POST({ request }) {
 
 		const response = await fetch(uri, {
 			method: 'PUT',
-			headers: headers
+			headers: headers,
+			body: JSON.stringify({ permission: 'pull' })
 		});
 
 		console.log(
