@@ -27,9 +27,9 @@
 			{data.total} hackers registered!
 		</p>
 
-		<button class="button primaryButton is-big" on:click={login}>
+		<button class="button primaryButton is-big" on:click={login} disabled>
 			<span class="icon-github"></span>
-			Sign in with GitHub
+			Submissions are closed
 		</button>
 
 		<a
